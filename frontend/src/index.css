@@ -1,0 +1,195 @@
+/* Resetting default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Main container styles */
+.App {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Form styles */
+form {
+  margin-bottom: 20px;
+}
+
+span,
+label,
+input,
+.button,
+button {
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+label input {
+  width: 5%;
+  /* margin: 0; */
+}
+
+span {
+  text-align: center;
+}
+
+span input {
+  width: 10%;
+  margin: 0;
+}
+
+.button,
+button {
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Showcase works list styles */
+.radio {
+  display: flex;
+  justify-content: space-between;
+  width: 13%;
+
+  @media (max-width: 1150px) {
+    width: 40%;
+  }
+}
+
+.radio input {
+  width: 10%;
+  margin: 0;
+}
+
+.works-list {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+
+  @media (max-width: 1150px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.work-item.hide {
+  display: none;
+}
+.work-item.show {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  text-align: center;
+
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.work-item.show div {
+  width: 250px;
+  height: auto;
+}
+
+.work-item.show img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work-item.show div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.work-item.show div:last-of-type {
+  grid-column: span 2;
+  width: 100%;
+  align-self: end;
+}
+
+/* Toggle switch styles */
+.toggle-switch {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 20px;
+}
+
+.toggle-switch input[type='checkbox'] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input[type='checkbox']:checked + .slider {
+  background-color: #2196f3;
+}
+
+input[type='checkbox']:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Customer link styles */
+.customer-link {
+  display: block;
+  margin-top: 5px;
+  text-decoration: none;
+  color: #2196f3;
+}
+
+.customer-link:hover {
+  text-decoration: underline;
+}
